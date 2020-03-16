@@ -1,0 +1,118 @@
+\documentclass[twocolumn,letterpaper]{article}
+
+%encoding
+%--------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% mise en page
+%--------------------------------------
+\usepackage[margin=0.75in]{geometry}
+\usepackage{titlesec}
+\titlespacing*{\subsection}{0pt}{1.1\baselineskip}{\baselineskip}
+\titlespacing*{\subsubsection}{0pt}{1.1\baselineskip}{\baselineskip}
+
+% font
+% --------------------------------------
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{mathpazo}
+
+% custom sections
+%--------------------------------------
+\usepackage{titlesec}
+\titleformat
+{\section} % command
+[block] % shape
+{\bfseries\Large\itshape} % format
+{\thesection} % label
+{0.5ex} % sep: horizontal separation between label and title body
+{ } % before-code
+[\vskip-8pt\rule{0.49\textwidth}{1pt}] % after-code
+
+\setlength
+\parindent{0pt} % no indent
+
+%packages
+%--------------------------------------
+\usepackage{tikz}
+\usetikzlibrary{decorations.shapes}
+\usepackage[many]{tcolorbox}
+\usepackage{amsmath}
+\usepackage{graphicx}% insert images
+\usepackage{xcolor}
+
+%snippets
+%--------------------------------------
+\input{snippets/textbox.tex}
+
+%commands
+%--------------------------------------
+\newcommand{\pageRef}[2]{{\scriptsize \textcolor{blue}{C{#1}/S{#2}}}}
+\newcommand{\pRef}[1]{{\scriptsize \textcolor{blue}{#1}}}
+
+\title{GIA400}
+\author{Hivers 2020 | Sophie Bernadin-Mercier}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Fonctions TI}
+$$tvmPV(N,i,A,F,[K],[M],[\emptyset,1])$$
+$$tvmFV(N,i,P,A,[K],[M],[\emptyset,1])$$
+$$tvmPMT(N,i,P,F,[K],[M],[\emptyset,1])$$
+$$tvmI(N,P,A,F,[K],[M],[\emptyset,1])$$
+$$tvmN(i,P,A,F/P)$$
+$$npv(i,P_0,\{P_n,..\},\{f_n,...\})$$
+$$iper(r,m,k)$$
+$$ieff(r,c,k)$$
+$$MIRR(ifin, ireinv, CFo, \{CF1..CFn\},\{f1..fn\})$$
+$$IRR(P_0,\{f_1, f_2, .., f_n\},\{..\})$$
+$$pvgl(n,i,a,g)$$
+$$pvgg(n,i,a_1,g)$$
+
+{\footnotesize *taux $i$ en \% }
+
+\section{Stuff}
+\begin{center}
+\textbf{Valeur présente d'une perpétuité}
+$$P=\frac{A}{i}$$
+
+\textbf{Revenus}
+\begin{equation*}
+    \begin{split}
+        Profits(\pi)&=Revenus - Couts\ totaux\\
+        &=Revenus - CV - CF \\
+        &=P*Q-CV*Q-CF\\    
+    \end{split}
+\end{equation*}
+{\scriptsize P=Prix de vente\\Q=Quantité\\CV=Coûts variable\\CF=Coûts fixe}
+
+\end{center}
+
+\setcounter{section}{5}
+
+\input{sections/6_financement}
+\clearpage
+
+\input{sections/7_analyse_de_projet}
+\clearpage
+
+\input{sections/8_evaluation_de_projets}
+\clearpage
+
+\setcounter{section}{9}
+
+\input{sections/10_rentabilite_apres_impot}
+
+\clearpage
+\input{./glossary.tex}
+
+\input{sections/elements_du_flux_monetaire}
+
+\end{document}

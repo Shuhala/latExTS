@@ -1,0 +1,234 @@
+\section{Financement}
+
+\subsection{Obligations}
+
+\rbox{
+    \textbf{Valeur du coupon}
+    $$C_\%=i_{periode}=\frac{i}{M}$$
+    $$C_\$=A=C_\% *\ VN$$
+    {\scriptsize
+        $VN$ = valeur nominale (F)\\
+        $i$ = taux nominal capitalisé du coupon\\
+        $M$ = nombre de périodes par an\\
+        \vskip3pt
+        \textit{Exemple: i\% nominal composé semestriellement; i/2 pour avoir le taux semestriel}
+    }
+}
+
+\rbox{
+    \textbf{Valeur des intérêts (\$)}
+    \begin{equation*}
+        \begin{split}
+        I_{periode} &=C\%\ *\ VN \\
+        I_{annuel} &= I_{periode}*M \\
+        I_{total\ par\ an} &= Nb * I_{annuel}
+        \end{split}
+    \end{equation*}
+    {\scriptsize
+        $i$ = taux du coupon
+    }
+}
+
+\rbox{
+    \textbf{Taux par période}
+    \begin{equation*}
+        \begin{split}
+            i_{periode}&=tvmI(N,-P_{net},A,F) \\
+            &=irr(-P_{net},\{A,F+A\},\{N-1,1\})
+        \end{split}
+    \end{equation*}
+    \textbf{Taux annuel effectif}
+    $$r=i_{nominal}=i_{periode}*M$$
+    \textbf{Taux d'intérêt annuel effectif de l'obligation}\\
+    {\scriptsize Rendement d'une obligation}
+    $$K_{Obl\ brut}= i_{eff}=iper(r,M,1)$$
+    {\scriptsize
+        $N$ = nombre de périodes restantes(années * périodes par an)\\
+        $M$ = 2 pour un semestre comme période
+    }
+}
+
+\subsection{Coût de l'endettement}
+Deux catégories: dettes et obligations
+
+\subsection{Coût des capitaux propres}
+\pageRef{6}{43}
+L’entreprise devrait laisser espérer aux actionnaires, sur le flux monétaire réinvesti en leur nom dans l’entreprise, un rendement au moins égal à ce que ces actionnaires pourraient obtenir en investissant eux-mêmes leurs dividendes dans des entreprises comparables.
+
+Cependant, contrairement au coût de la dette, le coût des capitaux propres ne s’observe pas directement. Il doit être inféré à partir du prix des actions.
+
+\rbox{
+    \textbf{Prix net par action ou obligation}
+    \begin{equation*}
+        \begin{split}
+        P_{net} &=Prix_{courant} * (1 - f_c)\\
+                &= Prix_{courant} - F_c
+        \end{split}
+    \end{equation*}
+    {\scriptsize
+        \textcolor{red}{* $F_c*(1-t)$: si déductible d'impôt}\\\vskip1pt
+        $f_c$ = frais d'émission en \% \\
+        $F_c$ = frais d'émission en \$
+    }
+}
+
+\rbox{
+    \textbf{Frais d'émission (\$)}
+    $$ F_c = P_{courant} - P_{net}$$
+    
+    \textbf{Frais d'émission (\%)}
+    $$ f_c = 1 - \frac{P_{net}}{P_{courant}}$$
+    
+    \textbf{Frais totaux}
+    $$F_{total} = Nb * F_c$$
+}
+\rbox{    
+    \textbf{Nombre d'actions ou obligations}
+    \begin{equation*}
+        \begin{split}
+        Nb  &=\frac{\$ financement}{P_{net}} \\
+            &=\frac{Valeur\ totale}{Valeur\ unitaire}
+        \end{split}
+    \end{equation*}
+}
+
+\rbox{
+    \textbf{Valeur marchande}
+    $$VM = Nb \cdot P_{marche}$$
+}
+
+\subsection{Le français c'est difficile}
+{\small
+\textbf{Frais brut}; avant impôts; frais associés à la nouvelle émission
+
+\textbf{Financement par actions}; bénéfices non répartis
+
+\textbf{Prix du marché}; s'échange sur le \textit{marché}; valeur unitaire;
+
+\textbf{Prix d'émission}; se transigent à; prix courant; "prix de l'action"; cours actuel; prix actuel; s'échange \textit{actuellement};
+
+\textbf{Valeur nominale}; enregistrés aux livres; valeur aux livres; valeur comptable; valeur unitaire; \textcolor{red}{\textit{*Distinction entre valeur totale et unitaire}}\\
+
+\textbf{$D_0$}; dernier dividende annuel versé;
+
+\textbf{$D_1$}; dividende à la fin de l'année courante; dividende la première année;
+
+}
+
+\clearpage
+
+\begin{center}
+\begin{tabular}{||c c c |c c| c||} 
+    \hline
+    Source de financement & Valeur MARCHANDE & Poids & Avant impôt & Après impôt & Pondéré* \\
+     & ($V$\$) & ($W$\%) & ($K_{brut}$\%) & ($K_{net}$\%) & (\%) \\[0.5ex] 
+    \hline\hline
+    Emprunts & $V_{Dette}$ & $W_{D}$ & $K_D$ & $K_{D_{net}}$ & $Pondere$ \\
+    \hline
+    Obligation & $V_{Obl}$ & $W_{Obl}$ & $K_{Obl}$ & $K_{Obl_{net}}$ & $Pondere$ \\
+    \hline
+    \textbf{Dette totale} & $V_{Dette\ totale}$ & & & $K_{dette\ totale}$ & $Pondere_{dette}$ \\
+    \hline
+    \\
+    \hline
+    Bénéfices non répartis & $V_{BNR}$ & $W_{BNR}$ & $K_{BNR}$ & $K_{BNR_{net}}$ & $Pondere$ \\
+    \hline
+    Actions privilégiés & $V_{AP}$ & $W_{AP}$ & $K_{AP}$ & $K_{AP}$ & $Pondere$ \\
+    \hline
+    Actions ordinaires & $V_{AO}$ & $W_{AO}$ & $K_{AO}$ & $K_{AO}$ & $Pondere$ \\
+    \hline
+    \textbf{Capitaux Propres} & $V_{CP}$ & & & $K_{CP}$ & $Pondere_{CP}$ \\
+    \hline
+    \\
+    \hline
+    \textbf{TOTAL} & $V_{totale}$ & 100\% & & \textbf{CMPC} & $Pdr_{dette} + Pdr_{CP} $ \\ 
+    \hline
+\end{tabular}
+\end{center}
+
+\begin{RoundBox}
+\pageRef{6}{40}
+$$K_D = Cout\ avant\ impot$$
+$$K_{D_{net}} = Cout\ apres\ impot = K_D * (1-t)$$
+$$Pondere = K_{D_{net}}\ *\ Poids$$
+{\scriptsize
+* Pondération calculée en fonction de $K$ ou $K_{net}$
+}
+\end{RoundBox}
+
+\begin{RoundBox}
+    \pageRef{6}{48,P.636}
+    \textbf{Coût de nouvelles actions ordinaires}\\
+    $$K_{AO}=\frac{D_1}{P_0 - F_c}+g = \frac{D_1}{P_0(1-f_c)}+g$$
+    {\scriptsize
+    $p_0$ = Prix par action, prix du marché \\
+    $D_1$ = $D_0(1+g)$ = dividende de la première année \\
+    $g$ = Taux annuel de croissance du dividende \\
+    $f_c$ = Frais d'émissions en \% du prix des actions \\
+    $F_c$ = Frais d'émission en \$\\
+    \textit{*Les frais peuvent être déductibles d'impôts (ce qui serait spécifié), ils sont alors réduits de la valeur de l'impôt: $F_c net = F_c * (1-t)$}
+}
+\end{RoundBox}
+
+\begin{RoundBox}
+\pageRef{6}{51,P.636}
+\textbf{Coût des actions privilégiées}\\
+$$K_{AP}=\frac{D^*}{P^*-F_c}=\frac{D^*}{P^*(1-f_c)}$$
+{\scriptsize
+    $P^*$ = Prix actuel des actions, prix d'émission \\
+    $D^*$ = Dividende fixe annuel \\
+    $f_c$ = Frais d'émissions en \% du prix des actions \\
+    $F_c$ = Frais d'émission en \$\\
+    \textit{*Les frais peuvent être déductibles d'impôts, ils sont alors réduits de la valeur de l'impôt: $F_c net = F_c * (1-t)$}
+}
+\end{RoundBox}
+
+\begin{RoundBox}
+\pageRef{6}{51}
+\textbf{Coût des bénéfices non répartis}\\
+$$K_{BNR}=\frac{D_1}{P_0}+g$$
+{\scriptsize
+    $p_0$ = Prix par action, cours actuel de l'action \\
+    $D_1$ = $D_0(1+g)$ = dividende de la première année \\
+    $g$ = Taux annuel de croissance du dividende en \%
+}
+\end{RoundBox}
+
+\newpage
+\vspace*{5.75cm}
+
+\begin{RoundBox}
+\pageRef{6}{36}
+\textbf{Moyenne pondérée du coût de l'endettement après impôt}
+$$k_{dette\ totale}=W_D * K_D * (1 - t) + W_{obl}* K_{obl} * (1 - t)$$
+{\scriptsize
+    $W_D$ = fraction de la dette totale financée par un prêt à terme\\
+    $K_D$ = taux d'intérêt sur le prêt à terme\\
+    $W_{obl}$ = fraction de la dette totale financée par les obligations\\
+    $K_{obl}$ = taux d'intérêt effectif sur les obligations\\
+    $t$ = taux d'impôt marginal de l'entreprise
+    \\\\
+\textit{On doit aussi éventuellement tenir compte des frais d'émission des obligations.}
+}
+\end{RoundBox}
+
+
+\begin{RoundBox}
+\pageRef{6}{58}
+\textbf{Moyenne pondérée du coût des capitaux propres}\\
+$$K_{CP}=W_{BNR}*K_{BNR}+W_{AO}*K_{AO}+W_{AP}*K_{AP}$$
+{\scriptsize
+    $W_{BNR}$ = fraction des CP financés par les BNR \\
+    $W_{AO}$ = fraction des CP financés par les actions ordinaires \\
+    $W_{AP}$ = fraction des CP financés par les actions privilégiées \\
+    $W_{BNR}+W_{AO}+W{AP}=1$
+}
+\end{RoundBox}
+
+
+\begin{RoundBox}
+\pageRef{6}{62}
+\textbf{Coût moyen pondéré du capital}\\
+$$CMPC=\frac{V_{Dette\ totale}}{V_{Totale}}*K_{Dette\ totale} + \frac{V_{CP}}{V_{Totale}}*K_{CP}$$
+$$=Pondere_{dette} + Pondere_{CP}$$
+\end{RoundBox}

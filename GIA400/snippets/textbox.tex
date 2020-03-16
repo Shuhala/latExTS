@@ -1,0 +1,28 @@
+% REQUIRES:
+% \usepackage{tikz}
+% \usetikzlibrary{decorations.shapes}
+% \usepackage[many]{tcolorbox}
+
+% USAGE
+% \begin{RoundBox}
+%     test
+% \end{RoundBox}
+
+\newtcolorbox{RoundBox}{
+    enhanced,
+    arc=4pt,
+    frame hidden,
+    interior hidden,
+    borderline={0.4pt}{0pt}{dashed},
+}
+
+\newcommand{\rbox}[1]{%
+\begin{tcolorbox}[
+    enhanced,
+    arc=4pt,
+    frame hidden,
+    interior hidden,
+    borderline={0.4pt}{0pt}{dashed}]
+    #1
+\end{tcolorbox}
+}

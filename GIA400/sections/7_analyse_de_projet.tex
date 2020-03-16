@@ -1,0 +1,198 @@
+\section{Analyse de projets}
+
+\subsection{Délai de récupération}
+\pageRef{7}{P.275} Méthode servant à déterminer \textit{à quel moment} d'un projet le seuil de rentabilité est atteint.\\
+
+    \pageRef{7}{15}
+    \textbf{Inconvénients}\\
+        - Ne mesure pas la rentabilité d'un projet sur sa durée de vie totale.\\
+        - Ne fournit pas une mesure de rentabilité directement comparable au coût du capital.\\
+        - En tant que critère de sélection, la période de récupération maxiamle est purement arbitraire et subjective et élimine souvent des projets créateurs de valeur pour l'entreprise (dont le rendement est supérieur au coût du capital)
+    \subsubsection{Sans actualisation}
+    \begin{RoundBox}
+        $$DR=annee\ n^* +\frac{Ce\ qui\ reste\ annee\ n}{Flux\ a\ l'annee\ n+1}$$
+        \begin{footnotesize}
+            * Année avant que "ce qui reste" atteint 0
+        \end{footnotesize}
+    \end{RoundBox}
+    \textbf{Inconvénients:} Ne tient pas compte de l’influence du temps sur la valeur de l’argent
+
+\subsubsection{Avec actualisation}
+    \begin{RoundBox}
+    $$Flux\ actualise = \frac{flux}{(1 + taux\ de\ rendement^*)^{annee}}$$
+    $$DR=annee\ n +\frac{Ce\ qui\ reste\ annee\ n}{Flux\ actualise\ a\ l'annee\ n+1}$$
+    \begin{footnotesize}
+    * \% du taux de rendement en décimale
+    \end{footnotesize}
+    \end{RoundBox}
+
+\subsection{Valeur actualisée nette équivalente (PE) \textcolor{red}{\textit{(Méthode du flux monétaire)}}}
+    \pageRef{7}{P.275} Méthode d'équivalence qui convertit les flux monétaires d'un projet en une valeur nette.\\
+    
+    \noindent\fbox{%
+            \parbox{0.45\textwidth}{%
+            \begin{center}
+                Si \textbf{PE > 0}, on accepte l’investissement\\
+                Si \textbf{PE = 0}, on reste indifférent à l’investissement\\
+                Si \textbf{PE < 0}, on rejette l’investissement
+            \end{center}
+            }%
+        }\\
+    \begin{RoundBox}
+        $$VAN=PE=npv(i,-P_0,\{f_1, f_2, .., f_n\})$$\\
+        \textbf{Gradient linéaire} (constant chaque année)
+        $$PE=pvgl(n,i,A_1,g_\$)$$
+        \textbf{Gradient géométrique} (\% de l'année précédente)
+        $$PE=pvgg(n,i,P_0,g_\%)$$
+        {\scriptsize
+            $f$ = flux (actualisé ou non) à l'année 1 à n\\
+            $i$ =  taux d'intérêt ou TRAM
+        }
+    \end{RoundBox}
+    \noindent\fbox{%
+        \parbox{0.45\textwidth}{%
+        \begin{center}
+            Si \textbf{PE(TRAM) > 0}, on accepte l'investissement\\
+            Si \textbf{PE(TRAM) = 0}, indifférent à l'investissement\\
+            Si \textbf{PE(TRAM) < 0}, on rejette l'investissement
+        \end{center}
+        }%
+    }
+    
+\subsection{Valeur future nette équivalente (FE)}
+    \pageRef{7}{P.275} Méthode d'équivalence qui convertit les flux monétaires d'un projet en une valeur future nette.
+    \begin{RoundBox}
+        $$FE(TRAM)=tvmFV(n, TRAM,-PE(TRAM),0)$$
+        {\scriptsize
+            $f$ = flux (actualisé ou non) à l'année 1 à n
+        }
+    \end{RoundBox}
+    \noindent\fbox{%
+        \parbox{0.45\textwidth}{%
+        \begin{center}
+            Si \textbf{FE(TRAM) > 0}, on accepte l’investissement\\
+            Si \textbf{FE(TRAM) = 0}, indifférent à l’investissement\\
+            Si \textbf{FE(TRAM) < 0}, on rejette l’investissement
+        \end{center}
+        }%
+    }
+
+\subsection{Valeur annuelle équivalente (AE)}
+    \pageRef{7}{P.275} Méthode d'équivalence qui convertit les flux monétaires d'un projet en une valeur annuelle nette.
+    \begin{RoundBox}
+        {\small $$AE(TRAM)=tvmPMT(n, TRAM,-PE(TRAM),0)$$}
+        {\scriptsize
+            $f$ = flux (actualisé ou non) à l'année 1 à n
+        }
+    \end{RoundBox}
+    \noindent\fbox{%
+        \parbox{0.45\textwidth}{%
+        \begin{center}
+            Si \textbf{AE(TRAM) > 0}, on accepte l’investissement\\
+            Si \textbf{AE(TRAM) = 0}, indifférent à l’investissement\\
+            Si \textbf{AE(TRAM) < 0}, on rejette l’investissement
+        \end{center}
+        }%
+    }
+
+\subsection{Taux de rendement interne (TRI)}
+    \pageRef{7}{P.253} Rendement du capital investi.
+
+    \pageRef{7}{P.275} Méthode qui calcule le taux d'intérêt gagné sur les fonds à l'intérieur d'un projet.
+    \begin{RoundBox}
+        $$TRI=IRR(-P_0,\{f_1, f_2, .., f_n\},\{..\})$$
+        {\scriptsize
+            $f$ = flux (actualisé ou non) à l'année 1 à n
+        }
+    \end{RoundBox}
+    \noindent\fbox{%
+        \parbox{0.45\textwidth}{
+        \begin{center}
+            Si \textbf{TRI > TRAM}, on accepte l’investissement\\
+            Si \textbf{TRI = TRAM}, indifférent à l’investissement\\
+            Si \textbf{TRI < TRAM}, on rejette l’investissement
+        \end{center}
+        }
+    }
+    \subsubsection{Pourquoi rendement interne?}
+        On parle de rendement « interne » car le calcul du TRI suppose que l’on peut réinvestir les flux monétaires du projet et obtenir un rendement égal au TRI.
+    
+    \subsubsection{TRIM}
+    Une hypothèse plus réaliste serait que les flux monétaires du projet peuvent être réinvestis à un taux de rendement différent du TRI, comme, par exemple le TRAM. Le calcul du taux de rendement sous cette hypothèse est appelé le taux de rendement interne modifié (TRIM)
+    $irr(-100,{0,279},{4,1}) = 22.78\%$
+    \begin{RoundBox}
+    $$TRIM=(\frac{FE(flux\ positifs)}{-PE(flux\ negatifs)})^{1/N}-1$$
+    $$=MIRR(ifin, ireinv, CFo, \{CF1..CFn\},\{f1..fn\})$$
+    \end{RoundBox}
+
+\subsection{TRAM}
+    \textbf{Choix du taux de rendement minimal acceptable}\\
+    \pageRef{7}{P.641,\textbf{P.657}}
+    Sans limite de capital, le choix du TRAM est dicté par la disponibilité des données de financement.\\
+    
+    1. Si les calendriers exacts de financement par emprunt et de remboursement de la dette sont connus, méthode du flux monétaire net des capitaux propres. TRAM serait donc le coût des capitaux propres $i_e$.\\
+    
+    2. Si aucun mode de financement précis, déterminer les flux monétaires après impôt sans intégrer de flux monétaires d'endettement. On utilise alors le coût marginal du capital ($k$) en tant que TRAM.
+    
+\subsection{Coût annuel total (AEC)}
+    \pageRef{7}{41}
+    Pour évaluer le coût annuel de l’entreprise, ou pour trouver le coût annuel dans le cas d’un projet par dépenses, nous utilisons l’AEC. 
+    Valeur actualisée aujourd'hui de toutes nos dépenses.
+    \textit{Coût à chaque année pour faire marcher le projet.}
+        \begin{RoundBox}
+        $$AEC=OC+RC$$
+        \end{RoundBox}
+    \noindent\fbox{%
+        \parbox{0.45\textwidth}{
+        \pageRef{7}{46} Rentabilité de l'achat d'un équipement
+        \begin{center}
+            Si \textbf{AEC > Revenus}, on rejette\\
+            Si \textbf{AEC = Revenus}, indifférent\\
+            Si \textbf{AEC < Revenus}, on accepte
+        \end{center}
+        }
+    }
+
+\subsubsection{Recouvrement en capital (RC)}
+    \pageRef{7}{42} Coûts annuels équivalents en capitaux
+    \begin{RoundBox}
+        $$RC(i)=tvmPMT(N,i,P,-S)$$
+        $$S=tvmFV(N,i,-P,RC(i))$$
+        {\scriptsize
+        $N$ = nombre d'années de vie \textbf{utile}\\
+        $i$ = taux, potentiellement le TRAM\\
+        $P$ = valeur de l'achat\\
+        $S$ = prix de revente, valeur de récupération
+        }
+    \end{RoundBox}
+
+\subsubsection{Coût d'opération (OC)}
+    \pageRef{7}{42} Coûts annuels équivalents d'opération et d'entretien.
+
+    Calculer l'AE des coûts d'opération.
+    
+\subsubsection{Exemple d'un projet par dépense}
+\pRef{Solutionnaire TP8/S16}
+    $$RC = tvmPmt(n,TRAM, (+)P_0, (-)S)$$
+    {\footnotesize
+        $n$: Durée de vie utile de l'équipement\\
+        $P_0$: achat d'un équipement\\
+        $S$: Prix de revente\\
+    }
+    \hrule
+    $$PE = pvgg(n,TRAM,(-)P_0,g_\%)$$
+    $$OC = tvmPmt(n,TRAM,PE,0)$$
+    \hrule
+    $$AEC = RC + OC$$
+
+\subsubsection{Exemple d'un projet par revenu}
+\pRef{Solutionnaire TP7/S17}
+    $$RC=tvmPmt(n,TRAM,(-)P_0, (+)S)$$
+    \hrule
+    $$PE=pvgl(n,TRAM,A_1,g_\$)$$
+    {\footnotesize
+        $A_1$: Flux monétaire net de la première année\\
+    }
+    $$A=tvmPmt(n,TRAM,(-)PE,0)$$
+    \hrule
+    $$AE=(-)RC+A$$
