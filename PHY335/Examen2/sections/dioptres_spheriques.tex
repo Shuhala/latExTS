@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    $$\frac{n_i}{s_o}+\frac{n_t}{s_i}=\ \frac{n_i}{f_o}=\ \frac{n_t}{f_i}=\ \frac{n_t - n_i}{R}$$
+
+    \txt{
+        \textbf{Distance focale objet}\\
+        Si $s_i=\infty$ (rayons émergents sont parallèles), alors:
+    }
+    $$s_o=f_o=\frac{n_i R}{(n_t-n_i)}$$
+    
+    \txt{
+        \textbf{Distance focale image}\\
+         Si $s_o=\infty$ (rayons incidents parallèles convergent en un point $f_i$), alors:
+    }
+    $$s_i=f_i=\frac{n_t R}{(n_t-n_i)}$$
+    
+    \txt{
+        \textbf{Grandissement transversal}\\
+        (n = 1 pour une lentille mince ou miroir)
+    }
+    $$g_t=-\frac{n_i s_i}{n_t s_o} = \frac{h_i}{h_o}$$
+    $$g_{total} = g_{t1} \cdot g_{t2} \cdot ... \cdot g_{tn}$$
+    
+    {\footnotesize
+    *Sens des rayons: Objet à l'observateur.\\
+    **Si $R\rightarrow\infty$ (ex: ours regarde un saumon directement au dessus de lui), $\frac{n_i}{s_o}+\frac{n_t}{s_i}=0$
+    }
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Dioptres sphériques};
+\end{tikzpicture}

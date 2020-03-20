@@ -1,0 +1,37 @@
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        \txt{\footnotesize
+            $s_o > 0$ l'objet est réel du côté incident \\
+            $s_o < 0$ l'objet est virtuel du côté émergent \vskip4pt
+            
+            $s_i > 0$ l'image est réel du côté émergent\\
+            $s_i < 0$ l'image est virtuelle du côté incident\vskip4pt
+            
+            $R > 0$ C* est du côté des rayons émergents \\
+            $R < 0$ C est du côté opposé aux rayons émergents \\
+            {\scriptsize *Centre de courbure $C$}\vskip4pt
+            
+            $g_t > 0$ l'image est du même sens que l'objet \\
+            $g_t < 0$ l'image est inversée à l'objet\vskip4pt
+            
+            $|g_t| > 1$ l'image agrandit la taille de l'objet \\
+            $|g_t| < 1$ l'image réduit la taille de l'objet\vskip4pt
+            
+            \begin{tikzpicture}[baseline=1ex, scale=0.5, style={inner sep=0}]
+                \node (A) at (0, 0) {};
+                \node (B) at (0, 1) {};
+                \draw[<->] (A) edge (B);
+            \end{tikzpicture}
+            $f>0$ lentille biconvexe [()], convergente \\
+	        \begin{tikzpicture}[baseline=1ex, scale=0.5, style={inner sep=0}]
+                \node (C) at (4, 0) {};
+                \node (D) at (4, 1) {};
+                \draw[>-<] (C) edge (D);
+            \end{tikzpicture}
+            $f<0$ lentille biconcave [)(], divergente tel que $n_t > n_i$
+        }
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Convention de signes};
+\end{tikzpicture}

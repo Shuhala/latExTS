@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    % \txt{\footnotesize
+    %     Il existe une paire de points $f_o$ et $f_i$ ayant les propriétés: 1) Un obj placé en $f_o$ donne des rayons réfléchis parallèles. 2) Des rayons incidents parallèles convergeront en $f_i$
+    % }
+    $$\frac{1}{f}=\frac{1}{s_o}+\frac{1}{s_i}=\frac{2}{R}$$
+    \txt{
+    \begin{center}
+        \textbf{Si} $s_i=\infty$, \textbf{alors} $s_o=f_o=\frac{R}{2}$,\hskip15pt
+        \textbf{Si} $s_o=\infty$, \textbf{alors} $s_i=f_i=\frac{R}{2}$\\
+        Donc $f_i=f_o=f=\frac{R}{2}$
+    \end{center}
+        \textbf{Miroir concave:} Si $R > 0$, alors $f > 0$, 
+        \textbf{Miroir convexe:} Si $R < 0$, alors $f < 0$,
+        \textbf{Miroir plan:} $R=\infty$ donc $s_i=-s_o$ et $g_t=\frac{-s_i}{s_o}=+1$
+    }
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Miroirs};
+\end{tikzpicture}

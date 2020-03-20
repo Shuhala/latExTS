@@ -1,0 +1,51 @@
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        \includegraphics[width=1.04\textwidth]{images/ex_lentille_epaisse.png}
+        
+        \textbf{Caractéristiques du dioptre}\\
+        
+        \boxed{$$\frac{1}{f} = (n_{la}-1)[\frac{1}{R_1}-\frac{1}{R_2}+\frac{(n_{la}-1)\ a}{n_{la}\ R_1\ R_2}]$$}
+        
+        $solve(\frac{1}{f}=(0.5)\cdot (\frac{1}{20}-\frac{1}{-20}+\frac{(n_{la}-1)\cdot20}{n_{la}\cdot20\cdot-20}),f)|n_{la}=\frac{1.5}{1}=+24cm$
+        
+        \boxed{$$\bar{V_1 H_1}=\frac{-f(n_{la}-1)\ a}{R_2\ n_{la}}$$} $=\frac{-24(n_{la}-1)\ 20}{(-20)\ (n_{la})}=+8cm$\\
+        
+        \boxed{$$\bar{V_2 H_2} = \bar{V_1 H_1}(\frac{R_2}{R_1})$$} $=(+8)(\frac{-20}{20})=-8cm$\\
+        
+        \textbf{Interface 1 (lentille)}\\
+        
+        \boxed{$$s_{o1}=\Delta_{objet,lentille}+\bar{V_1 H_1}$$} $=52cm+(+8)=+60cm$\\
+        
+        \boxed{$$\frac{1}{f}=\frac{1}{s_o}+\frac{1}{s_i}$$} $=solve(\frac{1}{+24}=\frac{1}{+60}+\frac{1}{s_{i}},s_{i})=40cm$\\
+        
+        \boxed{$$s_{i1}=s_i+\bar{V_2 H_2}$$} $=40+(-8)=+32cm$\\
+        
+        $g_t=-\frac{+40}{+60}=-\frac{2}{3}X$\\
+        
+        \textbf{Interface 2 (miroir)}
+        
+        \boxed{$$s_{o2}=\Delta_{lentille,miroir}-s_{i1}$$} $=52-32=+20cm$\\
+        
+        \boxed{$$\frac{1}{s_o}+\frac{1}{s_i}=\frac{2}{R}$$}
+        $=solve(\frac{1}{+20}+\frac{1}{s_{i2}}=\frac{2}{R},s_{i2})=false=\infty$
+        
+        $g_t=-\frac{\infty}{+20}$\\
+        
+        \textbf{Interface 3 (lentille)}
+        
+        \boxed{$$s_{o3}=\Delta_{miroir,lentille}-s_{i2}$$} $=\infty$\\
+        
+        \boxed{$$\frac{1}{f}=\frac{1}{s_o}+\frac{1}{s_i}$$} $=solve(\frac{1}{+24}=\frac{1}{\infty}+\frac{1}{s_i},s_i)=+24cm$\\
+        
+        \boxed{$$s_{i3}=s_i+\bar{V_2 H_2}$$} $=(+24)+(-8)=16cm$\\
+        
+        $g_t=-\frac{+24}{\infty}=-24X$
+        
+        $g_{total}=(-\frac{2}{3})(-\frac{1}{+20})(-\frac{+24}{1})=-0.8X$\\
+        
+        \textit{\textbf{Réponse:} Image réelle, à 16cm de la droite de la face droite du dioptre.}
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Exercice lentille épaisse};
+\end{tikzpicture}

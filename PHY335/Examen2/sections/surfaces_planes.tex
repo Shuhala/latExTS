@@ -1,0 +1,39 @@
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    	\begin{tabular}{>{\raggedleft\arraybackslash}p{4cm}>{\raggedright\arraybackslash}p{3.5cm}}
+    	\tabItem
+    	    {Rayon réfléchi}
+    	    {$\theta_i = \theta_r$}
+	    \tabItem
+	        {Rayon réfracté\par{\scriptsize(loi de la réfraction ou de Snell-Descartes)}}
+	        {$n_i sin\theta_i = n_t sin\theta_t$}
+	    \tabItem
+	        {Réflexion totale interne\par{\scriptsize (où $\theta_i > \theta_c$ et $n_i > n_t$)}}
+	        {$sin\theta_c=n_t/n_i$}
+	    \tabItem
+	        {Position de l'image}
+	        {$s_i = -\frac{n_t cos\theta_t}{n_i cos\theta_i}s_o$}
+	    \tabItem
+	        {Profondeur apparente}
+	        {$\frac{y'}{y}=\frac{n_t}{n_i}$}
+	    \tabItem
+	        {Longueur d'onde transmise}
+	        {$\lambda_t = \frac{n_i}{n_t} \lambda_i \newline \lambda=c / f$}
+	    \tabItem
+	        {Indice de réfraction du milieu de vitesse $c$}
+	        {$n=\frac{c_0}{c}$}
+	    \tabItem
+	        {Vitesse dans le vide}
+	        {$c= 3 \times 10^8 \ m/s$}
+	\end{tabular}
+	{\footnotesize
+	*Si $n_i > n_t$, alors $\theta_i \leq \theta_t \leq 90^\circ$
+
+    \textbf{Indice de réfraction:} Niveau de résistance offert par le milieu transparent au passage de la lumière. Noté $n=c_0 / c$
+    \textbf{Principe de Fermat:} Un rayon lumineux se propageant entre deux points emprunte le chemin ( LCO: longueur de chemin optique) qui correspond au temps de parcours minimum. (Rayon réfracté).
+}
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Optique géométrique des surfaces planes};
+\end{tikzpicture}

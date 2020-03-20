@@ -1,0 +1,99 @@
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    \small{
+    	\begin{tabular}{>{\raggedleft\arraybackslash}p{4cm}>{\raggedright\arraybackslash}p{3.5cm}}
+    	\textit Phase initiale de l'origine ($\varphi$) & 
+		    $\omega t_0 + \varphi= tan^{-1}(- \frac{v_0}{\omega x_0})$ \\
+		    \noalign{\vskip 2pt}
+		    \hdashline[0.5pt/4pt]
+		    \noalign{\vskip 2pt}
+	    \textit Frequence angulaire ($\omega$) & 
+		    $=2 \pi f = \sqrt{\frac{k}{m}} = \sqrt{\frac{g}{l}} $ \\
+            \noalign{\vskip 2pt}
+		    \hdashline[0.5pt/4pt]
+		    \noalign{\vskip 2pt}
+	    \textit Periode (T) & 
+		    $=\frac{2\pi}{\omega}=\frac{1}{f}$ \\
+		    \noalign{\vskip 2pt}
+		    \hdashline[0.5pt/4pt]
+		    \noalign{\vskip 2pt}
+	     \textit Nombre d'onde (k) $m^{-1}$ &
+		    $=\frac{\omega}{c}=\frac{2\pi}{\lambda}$ \\
+		    \noalign{\vskip 2pt}
+		    \hdashline[0.5pt/4pt]
+		    \noalign{\vskip 2pt}
+	     \textit Longueur d'onde ($\lambda$) &
+		    $=c T=\frac{c}{f}$ \\
+		    \noalign{\vskip 2pt}
+		    \hdashline[0.5pt/4pt]
+		    \noalign{\vskip 2pt}
+	     \textit Vitesse de l'onde (c) &
+		    $=\lambda f = \frac{\omega}{k} = \sqrt{\frac{F}{\mu}}$ \\
+		    \noalign{\vskip 2pt}
+		    \hdashline[0.5pt/4pt]
+		    \noalign{\vskip 2pt}
+% 	     \textit Vitesse transversale ($v_y(z,t)$) cm/s &
+% 	        $=\frac{\mathrm{d} }{\mathrm{d} t} y(z,t) \newline
+% 	        =-A \omega sin(\omega t - k z + \varphi)$
+% 		     \\
+% 		    \noalign{\vskip 2pt}
+% 		    \hdashline[0.5pt/4pt]
+% 		    \noalign{\vskip 2pt}
+% 	     \textit Acceleration transversale ($a_y(z,t)$) cm/$s^2$ &
+% 		    $=\frac{\mathrm{d} }{\mathrm{d} t} v_y(z,t) \newline
+% 		    = -A \omega ^2 cos(\omega t - k z + \varphi) \newline
+% 		    = - \omega ^2 y(z,t)$ \\
+% 		    \noalign{\vskip 2pt}
+% 		    \hdashline[0.5pt/4pt]
+% 		    \noalign{\vskip 2pt}
+% 		 \textit Position max ($x_{max}$) &
+% 		    $=A$ \\
+% 		    \noalign{\vskip 2pt}
+% 		    \hdashline[0.5pt/4pt]
+% 		    \noalign{\vskip 2pt}
+	     \textit Vitesse max ($v_{max}$) &
+		    $=\omega A$ \\
+		    \noalign{\vskip 2pt}
+		    \hdashline[0.5pt/4pt]
+		    \noalign{\vskip 2pt}
+	     \textit Acceleration max ($a_{max}$) &
+		    $=\omega ^2 A$\\
+		    \noalign{\vskip 2pt}
+		    \hdashline[0.5pt/4pt]
+		    \noalign{\vskip 2pt}
+		 \textit Circonférence, Rayon de courbure &
+		    $2 \pi r = v_{obj} \cdot T$\\
+		    \noalign{\vskip 2pt}
+		    \hdashline[0.5pt/4pt]
+		    
+		    \noalign{\vskip 2pt}
+	    \textit Aire d'un cercle &
+		    $\pi r^2$\\
+		    \noalign{\vskip 2pt}
+		    \hline
+		    \noalign{\vskip 3pt}
+	\end{tabular}}
+	
+	\begin{tabular}{l|c}
+    \begin{minipage}[c]{0.5\textwidth}
+        \txt{
+        \textbf{\textit{\footnotesize Ondes se propageant en direction de..}} \\
+        \textbf{z > 0: }
+        $(\omega t - k z)$ et $(k z - \omega t)$ \\
+        \textbf{z < 0: }
+        $(\omega t + k z)$ et $(- \omega t - k z)$
+    }
+    \end{minipage} &
+    	$v_f=v_i+a\ \Delta t$,\hskip15pt $F=m\cdot a$
+    \end{tabular}
+    
+    \begin{center}
+    $sin=\frac{o}{h}$,\quad$cos=\frac{a}{h}$,\quad$tan=\frac{o}{a}$\\
+    1 rad = 0.1591549431 circle,\qquad 1 circle = 6.2831853072 rad    
+    \end{center}
+    
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Révision};
+\end{tikzpicture}

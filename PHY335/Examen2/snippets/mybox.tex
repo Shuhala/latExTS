@@ -1,0 +1,17 @@
+% REQUIRE:
+% \usepackage{tikz}
+
+% USAGE:
+% \begin{tikzpicture}
+% \node [mybox] (box){%
+%     \begin{minipage}{0.3\textwidth}
+%         \begin{center}
+%             TEXT HERE
+%         \end{center}
+%     \end{minipage}
+% };
+% \node[fancytitle, right=10pt] at (box.north west) {TITLE HERE};
+% \end{tikzpicture}
+
+\tikzstyle{mybox} = [draw=black, fill=white, thick, rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
+\tikzstyle{fancytitle} =[fill=white, text=black, font=\bfseries]

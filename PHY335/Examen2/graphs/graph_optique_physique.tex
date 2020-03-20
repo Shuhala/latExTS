@@ -1,0 +1,18 @@
+\tdplotsetmaincoords{60}{130}
+\begin{tikzpicture}[tdplot_main_coords,line cap=round,>=stealth]
+    %B
+    \draw[->] (0,0,0) -- (0,0,1.5) node[above=1.05] {\textbf{B} Champ magnétique};
+    \draw[color=black] (0,0,2.1) node {\footnotesize (Pouce)};
+    
+    % E
+    \draw[->] (0,0,0) -- (0,2,0) node[below=1.05] {\textbf{E} Champ électrique};
+    \draw[color=black] (0,2,-0.6) node {\footnotesize (Majeur)};
+    
+    % s
+    \draw[->] (0,0,0) -- (2,0,0) node[below,pos=1.05] {\textbf{S} Sens de propagation};
+    \draw[color=black] (2,0,-0.6) node {\footnotesize (Index)};
+    \draw[color=red] plot[variable=\s,domain=0:pi/1.75,samples=100,smooth] ({\s},{0.2*sin(\s*1000)});
+    
+    % rotation
+    \draw [thin, <->, >=stealth'] (0.3,-0.8,0) arc (5:350:5pt and 10pt);
+\end{tikzpicture}

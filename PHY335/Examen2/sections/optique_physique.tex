@@ -1,0 +1,60 @@
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    \begin{tabular}{>{\raggedleft\arraybackslash}p{3.3cm}>{\raggedright\arraybackslash}p{4.2cm}}
+        \tabItem
+            {Vitesse de propagation {\scriptsize (OEM)}}
+            {$c=\frac{1}{\sqrt{\varepsilon_o\mu_o}}=\frac{E_o}{B_o}$}
+    	\tabItem
+    	    {Champ électrique\par{\scriptsize($Volt/m$ ou $Watts/Am$)}}
+    	    {$E_x(z,t)=E_o sin(\omega t \mp k z + \phi_o)$}
+	    \tabItem
+    	    {Champ magnétique\par{\scriptsize($Tesla$ ou $Web/m^2$)}}
+    	    {$B_y(z,t)=B_o sin(\omega t \mp k z + \phi_o)$}
+	    \tabItem
+    	    {Intensité de l'OEM\par{\scriptsize(Vecteur de Poynting). S est parallèle à la propagation. ($Watts/m^2$)\par **$E_o$ et $B_o$ sont l'AMPLITUDE}}
+    	    {
+        	    $\vec{S}=\frac{\vec{E}\times\vec{B}}{\mu_o}$\par
+        	    $I_{moy}=\frac{E_o\ B_o}{2\ \mu_o}=\frac{c_o\ B_o^2}{2\ \mu_o}=\frac{E_o^2}{2\ \mu_o c_o}$
+    	    }
+	    \tabItem
+    	    {Loi de Wien\par{\scriptsize (située dans l'infrarouge) ($m\cdot ^\circ K$)}}
+    	    {$\lambda_{max}T= 2.898\times10^{-3}$}
+	    \tabItem
+    	    {Loi de Stefan-Boltzmann {\scriptsize ($I=\frac{Watts}{m^2}$), ($L=Watts$)}}
+    	    {
+        	    $I=\sigma(T^4-T_o^4)$\par
+        	    $L=I\cdot Aire$, {\scriptsize $\sigma$= cte. de Boltzmann\par
+    	    $T=temperature + Kelvin$}
+    	    }
+	    \tabItem
+    	    {Qte de mouvement du photon {\footnotesize ($Kg\frac{m}{s}$)}}
+    	    {$p=\frac{E}{c} = \frac{hf}{c}$\par{\scriptsize     	    tel que $E=mc^2$ ET $m=\frac{E}{c^2}$, \hskip3pt
+    	    $p=mv$ ET $m=\frac{p}{c}$}}
+	    \tabItem
+    	    {" sur une surface absorbante}
+    	    {$p= m_B v_B =\frac{U}{c}$}
+	    \tabItem
+    	    {" sur une surface réfléchissante}{$p=m_B v_B =\frac{2U}{c}$}
+	    \tabItem
+    	    {" sur une surface partiellement réfléchissante}
+    	    {$p=m_B v_B=(R+1)\frac{U}{c}$\par{\scriptsize (si une fraction R $(0<R<1)$ des photons est réfléchie par la surface)}}
+	    \tabItem
+	        {Pression de radiation {\scriptsize($\frac{N}{m^2}$)}}
+	        {$P=\frac{F}{A_\bot}=\frac{(R+1)}{c}I$,  {\scriptsize où $I=S_{moy}$}}
+        \tabItem
+            {Distance entre S et O}
+            {$solve(d=c \Delta t,\ d)$\par{\scriptsize (2d si allé-retour)}}
+        \tabItem
+            {Amplitude}
+            {$A=\sqrt{E_x^2+E_y^2+E_z^2}=E_o\ V/m$}
+	\end{tabular}
+	{\footnotesize
+	\textcolor{blue}{$A_\bot$}: Aire de la surface éclairée par la lumière.
+	\textcolor{blue}{$F$}: Force exercée sur la surface éclairée par la lumière.
+	\textbf{Pression de radiation:} Si on place un obstacle sur le parcourt d’un rayonnement électromagnétique, celui-ci ressentira une \textit{force résultante} qui tentera de le \textit{déplacer} dans le sens de la propagation.
+	}
+    \end{minipage}
+};
+\node[fancytitle, right=10pt] at (box.north west) {Optique physique};
+\end{tikzpicture}

@@ -1,0 +1,149 @@
+\documentclass[letterpaper,8pt]{extarticle}
+ 
+\usepackage[landscape, letterpaper]{geometry}
+
+% encoding
+% --------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% packages
+% --------------------------------------
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{colortbl}
+\usepackage{graphicx}% insert images
+\graphicspath{ {./images/} }
+\usepackage{amsmath} %box around equations
+\usepackage{ragged2e}
+\usepackage{cancel}
+\usepackage{tikz-3dplot}
+\usepackage{arydshln} % hline
+\usepackage{dashbox}
+
+% Graph
+% --------------------------------------
+\usepackage{pgf,pgfplots}
+\pgfplotsset{compat=1.15}
+\usetikzlibrary{arrows}
+
+% imports
+% --------------------------------------
+\input{snippets/mybox}
+
+% page format
+% --------------------------------------
+\advance\topmargin-0.9in
+\advance\textheight3in
+\advance\textwidth3in
+\advance\oddsidemargin-1.5in
+\advance\evensidemargin-1.5in
+\parindent0pt
+\parskip2pt % column breaks wont be retarded
+
+% font
+% --------------------------------------
+\usepackage{lmodern}
+% \usepackage{cmbright}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{mathpazo}
+\DeclareSymbolFont{mathpazo}{OML}{ztmcm}{m}{it}
+\DeclareMathSizes{7}{7.5}{7.5}{7.5}
+
+
+% commands
+\newcommand{\hr}{\centerline{\rule{3.5in}{1pt}}}
+\newcommand{\tabItem}[2]{#1 & #2 \\ \noalign{\vskip 2pt} \hdashline[0.5pt/4pt] \noalign{\vskip 2pt}}
+\newcommand{\txt}[1]{\small{#1}}
+\newcommand{\question}[1]{\textcolor{red}{\scriptsize\textit{#1}}}
+\newcommand\dboxed[1]{\dbox{\ensuremath{#1}}}
+
+\begin{document}
+
+\begin{center}
+    {\small{\textbf{PHY335 - Examen 2} | Hivers 2020 | Sophie Bernadin-Mercier | \textcolor{blue}{github.com/Shuhala/latExTS}}}    
+\end{center}
+
+\vspace{-0.5cm}
+
+\begin{multicols*}{3}
+\textbf{Variables}\\
+\txt{\footnotesize
+    \def \skip {\textbf{;}\hskip5pt}
+    \textcolor{blue}{$R$}           :Rayon de courbure\skip
+    \textcolor{blue}{$\theta_c$}    :Angle critique\skip
+    \textcolor{blue}{$\theta_i$}    :Angle d'incidence\skip
+    \textcolor{blue}{$f$}           :Distance focale\skip
+    \textcolor{blue}{$h_i$}         :Hauteur de l'image\skip
+    \textcolor{blue}{$h_o$}         :Hauteur de l'objet\skip
+    \textcolor{blue}{$n_a$}         :indice du milieu autour de la lentille (air)\skip
+    \textcolor{blue}{$n_l$}         :indice de la lentille\skip
+    \textcolor{blue}{$n_{la}$}      =$n_l/n_a$\skip
+    \textcolor{blue}{$s_i$}         :Position de l'image produite\skip
+    \textcolor{blue}{$s_o$}         :Position de l'objet présenté à l'interface\skip
+    \textcolor{blue}{$R$}           =Coefficient de réflexion de la surface
+    \textcolor{blue}{$U$}           =Énergie total en Joules de la lumière incidente sur la surface\skip
+    \textcolor{blue}{$\mu_0$}       :Perméabilité du vide (\textcolor{purple}{$\_\mu0$}) = $4\pi\times10^{-7}\ \frac{Wb}{Am}$\skip
+    \textcolor{blue}{$\varepsilon_0$}:Permittivité du vide (\textcolor{purple}{$\_\varepsilon0$}) = $8.8542\times10{-12}\ \frac{C^2}{N\ m^2}$\skip
+    \textcolor{blue}{$c_0$}         (\textcolor{purple}{$\_c$}) =$3\times10^8\ \frac{m}{s}$\skip
+    \textcolor{blue}{$f$}           =Fréquence de l'onde associée au photon (Hz)\skip
+    \textcolor{blue}{$h$}           :Constante de Planck (\textcolor{purple}{$\_h$})=$6.63\times 10^{-34} Joules \cdot Seconde$\skip
+}
+
+% --------------------------------------
+\input{sections/convention_de_signes}
+\input{sections/surfaces_planes}
+\input{sections/ex_refraction}
+
+\vfill\columnbreak
+
+% --------------------------------------
+\input{sections/dioptres_spheriques}
+\input{sections/lentilles_minces}
+\input{sections/lentilles_epaisses}
+\input{sections/miroirs}
+
+\vfill\columnbreak
+
+% --------------------------------------
+
+\input{sections/revision_exam1}
+\begin{tabular}{lc}
+\begin{minipage}[t]{0.15\textwidth}
+    \vspace{-2.2cm}
+    \includegraphics[scale=0.25]{images/lentilles_convergent.jpeg}
+\end{minipage} &
+    % \vspace{-2cm}
+    \includegraphics[scale=0.25]{images/lentilles_divergentes.jpeg}
+\end{tabular}
+
+\includegraphics[scale=0.25]{images/miroirs_dioptres.png}
+
+\begin{tabular}{lc}
+\begin{minipage}[c]{0.1\textwidth}
+    \vspace{-3cm}\hspace{-0.5cm}
+    \input{graphs/graph_loi_reflexion}
+\end{minipage} &
+    \vspace{-2cm}
+    \input{graphs/graph_optique_physique}
+\end{tabular}
+
+
+\vfill\columnbreak
+
+\input{sections/ex_7}
+\input{sections/ex_lentille_epaisse}
+
+\vfill\columnbreak
+
+\input{sections/optique_physique}
+\input{sections/effet_doppler}
+
+\vfill\columnbreak
+
+\input{sections/ex_8}
+\input{sections/ex_optique_physique}
+
+\end{multicols*}
+\end{document}
